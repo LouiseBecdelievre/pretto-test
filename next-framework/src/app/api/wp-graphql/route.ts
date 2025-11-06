@@ -4,12 +4,11 @@ import posts from "@/fixtures/posts.json";
 export async function POST(req: Request) {
     const { query, variables } = await req.json();
 
-    if (query.includes("posts(") && query.includes("nodes { slug")) {
-
-        return NextResponse.json({
-        data: { posts: { nodes: posts.map(p => ({ slug: p.slug, modified: p.modified })) } }
-        });
-    }
+    
+        if (typeof query === "string" && query.includes("posts(")) {
+        const nodes = posts.map(p => ({ slug: p.slug, title: p.title, date: p.date }));
+        return NextResponse.json({ data: { posts: { nodes } } });
+        }
 
     if (query.includes("post(")) {
         const slug = variables?.slug as string;
