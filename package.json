@@ -1,0 +1,11 @@
+{
+  "name": "solution",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install": "cd next-framework && pnpm install",
+    "dev": "cd next-framework && pnpm dev",
+    "build": "cd next-framework && pnpm build",
+    "start": "cd next-framework && pnpm start"
+  }
+}
