@@ -1,18 +1,142 @@
 [
   {
-    "slug": "premier-article",
-    "title": "Premier article",
-    "content": "<p>Hello world</p>",
-    "date": "2025-01-10T09:00:00Z",
-    "modified": "2025-01-12T10:00:00Z",
-    "seo": { "title": "Premier article", "metaDesc": "Intro", "canonical": "" }
+    "slug": "taux-immobilier-2025",
+    "title": "Taux immobilier 2025 : tendances et conseils",
+    "content": "<p>Les taux évoluent en 2025 avec un contexte macroéconomique apaisé. Voici nos conseils pour optimiser votre dossier.</p><h2>Points clés</h2><ul><li>Comparer plusieurs banques</li><li>Optimiser l’apport</li><li>Soigner l’assurance emprunteur</li></ul><p>Plus d’infos dans notre <a href=\"#\">guide complet</a>.</p>",
+    "date": "2025-10-20T09:30:00.000Z",
+    "modified": "2025-11-01T08:00:00.000Z",
+    "author": { "name": "Équipe Pretto" },
+    "seo": {
+      "title": "Taux immobilier 2025 : notre analyse",
+      "metaDesc": "Notre analyse des taux immobiliers en 2025 et nos conseils pour obtenir le meilleur financement.",
+      "canonical": "https://www.pretto.fr/articles/taux-immobilier-2025",
+      "opengraphImage": "https://picsum.photos/seed/taux2025/1200/630.jpg"
+    }
   },
   {
-    "slug": "deuxieme-article",
-    "title": "Deuxième article",
-    "content": "<p>Suite</p>",
-    "date": "2025-02-01T10:00:00Z",
-    "modified": "2025-02-02T10:00:00Z",
-    "seo": { "title": "Deuxième article", "metaDesc": "Suite", "canonical": "" }
+    "slug": "renegociation-de-pret-immobilier",
+    "title": "Renégociation de prêt immobilier : quand et comment ?",
+    "content": "<p>Renégocier peut réduire fortement le coût total du crédit.</p><p>Vérifiez l’écart de taux, les pénalités de remboursement anticipé et la durée restante.</p>",
+    "date": "2025-09-12T10:00:00.000Z",
+    "modified": "2025-10-15T14:45:00.000Z",
+    "author": { "name": "Équipe Pretto" },
+    "seo": {
+      "title": "Renégociation de prêt : mode d’emploi",
+      "metaDesc": "Quand renégocier son prêt immobilier et comment procéder avec les banques.",
+      "canonical": "https://www.pretto.fr/articles/renegociation-de-pret-immobilier",
+      "opengraphImage": "https://picsum.photos/seed/renegociation/1200/630.jpg"
+    }
+  },
+  {
+    "slug": "apport-personnel-quel-montant",
+    "title": "Apport personnel : quel montant viser en 2025 ?",
+    "content": "<p>L’apport personnel reste un levier clé pour obtenir un meilleur taux.</p><p>En général, visez 10 à 20% du prix d’achat, frais inclus.</p>",
+    "date": "2025-08-05T08:15:00.000Z",
+    "modified": "2025-10-28T16:10:00.000Z",
+    "author": { "name": "Équipe Pretto" },
+    "seo": {
+      "title": "Quel apport personnel viser ?",
+      "metaDesc": "Conseils pour déterminer le bon niveau d’apport personnel selon votre projet.",
+      "canonical": "https://www.pretto.fr/articles/apport-personnel-quel-montant",
+      "opengraphImage": "https://picsum.photos/seed/apport/1200/630.jpg"
+    }
+  },
+  {
+    "slug": "assurance-emprunteur-comparer",
+    "title": "Assurance emprunteur : comment bien comparer",
+    "content": "<p>L’assurance représente une part significative du coût du crédit.</p><p>Comparez garanties, délais de carence et exclusions.</p>",
+    "date": "2025-07-18T07:00:00.000Z",
+    "modified": "2025-10-01T12:20:00.000Z",
+    "author": { "name": "Équipe Pretto" },
+    "seo": {
+      "title": "Comparer son assurance emprunteur",
+      "metaDesc": "Méthode et critères pour bien choisir son assurance de prêt.",
+      "canonical": "https://www.pretto.fr/articles/assurance-emprunteur-comparer",
+      "opengraphImage": "https://picsum.photos/seed/assurance/1200/630.jpg"
+    }
+  },
+  {
+    "slug": "ptz-conditions-eligibilite-2025",
+    "title": "PTZ 2025 : conditions d’éligibilité et montants",
+    "content": "<p>Le Prêt à Taux Zéro évolue en 2025. Vérifiez votre éligibilité et les plafonds applicables.</p>",
+    "date": "2025-09-30T09:00:00.000Z",
+    "modified": "2025-11-02T11:30:00.000Z",
+    "author": { "name": "Équipe Pretto" },
+    "seo": {
+      "title": "PTZ 2025 : qui y a droit ?",
+      "metaDesc": "Faites le point sur les critères d’éligibilité et les zones éligibles au PTZ.",
+      "canonical": "https://www.pretto.fr/articles/ptz-conditions-eligibilite-2025",
+      "opengraphImage": "https://picsum.photos/seed/ptz2025/1200/630.jpg"
+    }
+  },
+  {
+    "slug": "frais-de-notaire-neuf-vs-ancien",
+    "title": "Frais de notaire : neuf vs ancien, quelles différences ?",
+    "content": "<p>Les frais sont plus faibles dans le neuf que dans l’ancien.</p><p>Anticipez-les dès le plan de financement.</p>",
+    "date": "2025-06-22T13:20:00.000Z",
+    "modified": "2025-09-02T09:35:00.000Z",
+    "author": { "name": "Équipe Pretto" },
+    "seo": {
+      "title": "Frais de notaire : comparer neuf et ancien",
+      "metaDesc": "Comprendre la composition des frais de notaire selon le type de bien.",
+      "canonical": "https://www.pretto.fr/articles/frais-de-notaire-neuf-vs-ancien",
+      "opengraphImage": "https://picsum.photos/seed/notaire/1200/630.jpg"
+    }
+  },
+  {
+    "slug": "dossier-de-pret-pieces-a-fournir",
+    "title": "Dossier de prêt : les pièces à fournir",
+    "content": "<p>Préparez vos justificatifs revenus, épargne et charges pour accélérer l’accord de principe.</p>",
+    "date": "2025-05-10T11:10:00.000Z",
+    "modified": "2025-10-05T15:40:00.000Z",
+    "author": { "name": "Équipe Pretto" },
+    "seo": {
+      "title": "Dossier de prêt immobilier : la checklist",
+      "metaDesc": "Liste des documents à rassembler pour un dossier de prêt complet.",
+      "canonical": "https://www.pretto.fr/articles/dossier-de-pret-pieces-a-fournir",
+      "opengraphImage": "https://picsum.photos/seed/dossier/1200/630.jpg"
+    }
+  },
+  {
+    "slug": "endettement-calculer-taux",
+    "title": "Taux d’endettement : comment bien le calculer",
+    "content": "<p>Le taux d’endettement standard reste proche de 35%.</p><p>Calculez votre capacité avant de vous positionner.</p>",
+    "date": "2025-04-14T08:05:00.000Z",
+    "modified": "2025-09-25T10:00:00.000Z",
+    "author": { "name": "Équipe Pretto" },
+    "seo": {
+      "title": "Calculer son taux d’endettement",
+      "metaDesc": "Méthode et exemples pour calculer votre taux d’endettement.",
+      "canonical": "https://www.pretto.fr/articles/endettement-calculer-taux",
+      "opengraphImage": "https://picsum.photos/seed/endettement/1200/630.jpg"
+    }
+  },
+  {
+    "slug": "investissement-locatif-fiscalite",
+    "title": "Investissement locatif : fiscalité et rentabilité",
+    "content": "<p>Choisir son régime fiscal (micro-foncier, réel) impacte votre rentabilité nette.</p>",
+    "date": "2025-03-02T09:45:00.000Z",
+    "modified": "2025-08-18T07:25:00.000Z",
+    "author": { "name": "Équipe Pretto" },
+    "seo": {
+      "title": "Investissement locatif : optimiser la fiscalité",
+      "metaDesc": "Réduire l’impôt et améliorer la rentabilité de votre investissement.",
+      "canonical": "https://www.pretto.fr/articles/investissement-locatif-fiscalite",
+      "opengraphImage": "https://picsum.photos/seed/locatif/1200/630.jpg"
+    }
+  },
+  {
+    "slug": "achat-reservation-neuf-vefa",
+    "title": "Achat en VEFA : ce qu’il faut savoir",
+    "content": "<p>La VEFA implique des appels de fonds échelonnés et des garanties spécifiques.</p>",
+    "date": "2025-02-11T10:30:00.000Z",
+    "modified": "2025-10-08T12:00:00.000Z",
+    "author": { "name": "Équipe Pretto" },
+    "seo": {
+      "title": "Achat dans le neuf (VEFA) : guide",
+      "metaDesc": "Fonctionnement d’un achat sur plan et points de vigilance.",
+      "canonical": "https://www.pretto.fr/articles/achat-reservation-neuf-vefa",
+      "opengraphImage": "https://picsum.photos/seed/vefa/1200/630.jpg"
+    }
   }
 ]

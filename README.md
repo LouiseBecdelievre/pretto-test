@@ -3,8 +3,10 @@ Projet réponse pour l'exercice d'entretien Pretto
 
 ## Démarrer le projet
 
-Utiliser node 20.
+Utiliser node 20. `nvm use`
+
 Editer 'example.env.local' en '.env.local'
+
 Lancer le serveur de developpement
 
 ```bash
