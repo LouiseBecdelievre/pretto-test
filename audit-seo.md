@@ -20,7 +20,7 @@ Impact : partage social dégradé, aperçu pauvre, CTR plus faible.
 
 ## 3. Canonical & risques de duplicate
 
-- Le champ seo.canonical existe côté WP, mais dans Gatsby il n’y a aucune garantie d’émettre un <link rel="canonical"> cohérent.
+- Le champ seo.canonical existe côté WP, mais dans Gatsby il n’y a aucune garantie d’émettre un `<link rel="canonical">` cohérent.
 
 - De plus, la génération d’URL (sitemap manuel) + passage d’objets complets previousPost/nextPost peut conduire à des variantes d’URL (ex: trailing slash, sous-chemins) non alignées.
 
