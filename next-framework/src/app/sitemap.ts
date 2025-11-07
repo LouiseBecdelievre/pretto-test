@@ -2,6 +2,7 @@ import { wp } from "@/lib/wp";
 
 export const revalidate = 300;
 
+// Ne générer que les URLs canoniques 
 export default async function sitemap() {
   const baseUrl = process.env.SITE_URL;
   try {

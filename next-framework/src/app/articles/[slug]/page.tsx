@@ -2,40 +2,8 @@ import { wp } from "@/lib/wp";
 import type { Metadata } from "next";
 import { GET_POST_BY_SLUG } from "@/lib/graphql/queries";
 import { notFound } from "next/navigation";
-
-type PostSEO = { title?: string; metaDesc?: string; canonical?: string };
-type Post = {
-  slug: string;
-  title: string;
-  content: string;
-  date?: string;
-  modifid?: string;
-  seo?: PostSEO;
-};
-
-function SeoJsonLd({
-  title,
-  url,
-  date,
-}: {
-  title: string;
-  url: string;
-  date?: string;
-}) {
-  const json = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: title,
-    mainEntityOfPage: url,
-    datePublished: date,
-  };
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(json) }}
-    />
-  );
-}
+import SeoJsonLdArticle from "@/components/SeoJsonLdArticle";
+import type { Post } from "@/types/wp";
 
 export async function generateStaticParams() {
   const { posts } = await wp<{ posts: { nodes: { slug: string }[] } }>(
@@ -69,20 +37,28 @@ export async function generateMetadata({
     const seo = post?.seo ?? {};
     const url = new URL(`/articles/${slug}`, process.env.SITE_URL!).toString();
     const title = seo.title ?? post?.slug ?? "Article";
+    const canonical =
+      seo.canonical && seo.canonical.startsWith("http") ? seo.canonical : url;
+
+    const ogImage = post?.seo?.opengraphImage ?? process.env.DEFAULT_OG_IMAGE;
+
     return {
       title,
       description: seo.metaDesc,
-      alternates: { canonical: seo.canonical ?? url },
+      alternates: { canonical },
       openGraph: {
-        url,
+        type: "article",
+        url: canonical,
         title,
-        description: seo.metaDesc,
+        description: seo.metaDesc ?? "",
       },
       twitter: {
         card: "summary_large_image",
         title,
-        description: seo.metaDesc,
+        description: seo.metaDesc ?? "",
+        images: ogImage ? [ogImage] : undefined,
       },
+      robots: { index: true, follow: true },
     };
   } catch {
     return { title: "Article indisponible", description: "" };
@@ -120,9 +96,29 @@ export default async function Page({
     <article>
       <header>
         <h1>{post.title}</h1>
+        {post.date && (
+          <time dateTime={new Date(post.date).toISOString()}>
+            {new Date(post.date).toLocaleDateString("fr-FR")}
+          </time>
+        )}
+        {post.modified && (
+          <meta
+            itemProp="dateModified"
+            content={new Date(post.modified).toISOString()}
+          />
+        )}
       </header>
       <div dangerouslySetInnerHTML={{ __html: post.content }} />
-      <SeoJsonLd title={post.title} url={url} date={post.date}></SeoJsonLd>
+
+      <SeoJsonLdArticle
+        url={url}
+        title={post.title}
+        description={post.seo?.metaDesc}
+        datePublished={post.date} // assure-toi d’un ISO (ex: "2025-11-06T10:15:00Z")
+        dateModified={post.modified}
+        authorName={post.author?.name}
+        image={post.seo?.opengraphImage ?? process.env.DEFAULT_OG_IMAGE}
+      />
     </article>
   );
 }
