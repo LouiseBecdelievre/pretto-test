@@ -2,9 +2,51 @@ import { GET_ALL_POSTS } from "@/lib/graphql/queries";
 import { wp } from "@/lib/wp";
 import Link from "next/link";
 import fixtures from "@/fixtures/posts.json";
+import { Metadata } from "next";
 
 const isBuild = process.env.NODE_ENV === "production";
 type PostListItem = { slug: string; title: string; date: string };
+
+export async function generateMetadata(): Promise<Metadata> {
+  const baseUrl = process.env.SITE_URL;
+  const title = "Site de test";
+  const description =
+    "Longue description expliquant ce qu'est le site afin d'aider au référencement";
+  const image = `${baseUrl}/og-default.jpg`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: baseUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      url: baseUrl,
+      type: "website",
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: "logo du site",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
+
 export default async function Home() {
   let nodes: PostListItem[] = [];
   if (isBuild) {
@@ -28,8 +70,7 @@ export default async function Home() {
             Poc pretto test next.JS
           </h1>
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Retrouver plus d&apos;informations dans le README. Pour voir le SEO,
-            visiter les articles.
+            Retrouver plus d&apos;informations dans le README.
           </p>
         </div>
         <div className="w-full mt-12">
